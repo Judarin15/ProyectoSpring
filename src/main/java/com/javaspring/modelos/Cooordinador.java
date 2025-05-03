@@ -24,6 +24,4 @@ public class Cooordinador {
     private String correo;
     @Column(name = "telefono", unique = true)
     private Long telefono;
-    @OneToMany(mappedBy = "cooordinador")
-    private List<Horario> horarios;
 }

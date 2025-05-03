@@ -4,7 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Data
 @NoArgsConstructor
@@ -18,18 +19,15 @@ public class Horario {
     private Long id;
 
     @Column(name = "hora_inicio")
-    private LocalDateTime hora_inicio;
+    private LocalTime hora_inicio;
 
     @Column(name = "hora_fin")
-    private LocalDateTime hora_fin;
+    private LocalTime hora_fin;
 
     @Column(name = "fecha_inicio")
-    private LocalDateTime fecha_inicio;
+    private LocalDate fecha_inicio;
 
     @Column(name = "fecha_fin")
-    private LocalDateTime fecha_fin;
+    private LocalDate fecha_fin;
 
-    @ManyToOne
-    @JoinColumn(name = "fk_id_cooordinador")
-    private Cooordinador cooordinador;
 }
