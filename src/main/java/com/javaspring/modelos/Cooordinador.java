@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,4 +24,6 @@ public class Cooordinador {
     private String correo;
     @Column(name = "telefono", unique = true)
     private Long telefono;
+    @OneToMany(mappedBy = "cooordinador")
+    private List<Horario> horarios;
 }
